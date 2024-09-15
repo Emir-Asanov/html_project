@@ -1,0 +1,9 @@
+.green-small-text {
+    color: green;
+    font-size: 12px; 
+}
+
+
+.element-border {
+    border: 2px solid rgb(20, 184, 94); 
+}
