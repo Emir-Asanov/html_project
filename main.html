@@ -1,36 +1,93 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
-
 <head>
-    <linkrel="styles" href="styles\styles.css"></linkrel>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatPets</title>
-</head>
     <style>
-       h1 {
-  font-size: 50px;
-    }
+        /* Стили для заголовков и границ */
+        h1 {
+            font-size: 50px;
+        }
         h2 {
-  font-size: 70px;
-    }
+            font-size: 70px;
+        }
+        p.solid {
+            border-style: solid;
+        }
 
-    p.solid {border-style: solid;}
+        /* Медиа-запрос для экранов меньше 600px */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 40px;
+            }
+            .solid {
+                border-width: 1px;
+            }
+        }
+
+        /* Псевдокласс :hover для ссылок */
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Стили для навигации и бургер-меню */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .burger {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+        #menu {
+            list-style-type: none;
+            display: flex;
+        }
+        #menu li {
+            margin-right: 20px;
+        }
+        @media (max-width: 600px) {
+            .burger {
+                display: block;
+            }
+            #menu {
+                display: none;
+                flex-direction: column;
+            }
+            #menu li {
+                margin-right: 0;
+            }
+        }
     </style>
-
-    
+</head>
 <body>
-    <p>
-    <h1><h1 style="color:rgb(5, 168, 100);"><b> СatPets </b></h1></h1>
+    <nav>
+        <div class="burger" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    </p>
+    <h1 style="color:rgb(5, 168, 100);"><b> CatPets </b></h1>
     <hr>
-    
-    <h2> Товари для тварин </h2>
-    <h1><p class="solid">тут ви знайдете все для тварин и не тільки</p></h1>
+
+    <h2> Товар для тварин </h2>
+    <p class="solid">Тут ви знайдете все для тварин и не тільки</p>
     <hr>
+
     <!-- Ненумерований список -->
     <ul>
-        <li><a href="https://masterzoo.ua/ua/">перший сайт</a></li>
-        <li><a href="https://pets.ua/ua">другий сайт </a></li>
+        <li><a href="https://masterzoo.ua/ua/">Перший сайт</a></li>
+        <li><a href="https://pets.ua/ua">Другий сайт</a></li>
     </ul>
 
     <img src="c:\Users\user\Downloads\Screenshot_2.jpg" alt="shop" width="1500" height="800">
@@ -38,68 +95,22 @@
     <!-- Опис проєкту -->
     <blockquote>
         Проєкт спрямований на створення інноваційного рішення для управління енергією в домашніх умовах.
-        задача зробити сайт де буде прописані всі завдання
-    </blockquote>>
+        Задача — зробити сайт, де будуть прописані всі завдання.
+    </blockquote>
+
     <!-- Таблиця з інформацією -->
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Тег HTML</th>
-                <th>Пояснення</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>&lt;title&gt;</td>
-                <td>створення назва сайту </td>
-            </tr>
-            <tr>
-                <td>&lt;h1&gt;</td>
-                <td>Створює заголовку .</td>
-            </tr>
-            <tr>
-                <td>&lt;hr&gt;</td>
-                <td>поділяє сайт.</td>
-            </tr>
-            <tr>
-                <td>&lt;ul&gt;</td>
-                <td>Тег cайти які я взяв.</td>
-            </tr>
-            <tr>
-                <td>&lt;table&gt;</td>
-                <td>Створює таблицю.</td>
-            </tr>
-            <tr>
-                <td>&lt;thead&gt;</td>
-                <td>Задає заголовок таблиці.</td>
-            </tr>
-            <tr>
-                <td>&lt;tbody&gt;</td>
-                <td>Містить основний вміст таблиці.</td>
-            </tr>
-            <tr>
-                <td>&lt;tfoot&gt;</td>
-                <td>Задає підвал таблиці (наприклад, підсумки).</td>
-            </tr>
-            <tr>
-                <td>&lt;tr&gt;</td>
-                <td>Використовується для створення рядків у таблиці.</td>
-            </tr>
-            <tr>
-                <td>&lt;th&gt;</td>
-                <td>Визначає заголовкову комірку в таблиці.</td>
-            </tr>
-            <tr>
-                <td>&lt;td&gt;</td>
-                <td>Визначає комірку з даними в таблиці.</td>
-            </tr>
-        </tbody>
-        <tfoot>
+   
 
-        </tfoot>
-    </table>
-
-
+    <!-- JavaScript для бургер-меню -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
 </body>
-
 </html>
